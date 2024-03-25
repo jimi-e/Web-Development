@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <title>
+
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <style>
+        span.timu {font-size: 1.5em;}
+        </style>
+        <LINK rel="stylesheet" type="text/css" href="src/test_css.css">
+        <script language="JavaScript">
+              var starttime=0,startsec=0,startmin=0;
+              var endtime=0,endsec=0,endmin=0;
+              var puttime=0;
+              function start(x)
+                        { starttime=new Date();startsec=starttime.getSeconds();startmin=starttime.getMinutes();
+                           
+                        }
+
+
+
+                function calculate()
+                {  var score=0;
+                    if(test.q1[2].checked&&test.q1[5].checked){score+=20;}
+                    if(test.q2[0].checked){score+=20;}
+                    if(test.q3.value=="C"){score+=20;}
+                    if(test.q4[3].checked){score+=10;}
+                    if(test.q5[2].checked&&test.q5[3].checked&&test.q5[5].checked){score+=30;}
+                    
+                    endtime=new Date();endsec=endtime.getSeconds();endmin=endtime.getMinutes();
+                 
+                    if(endmin>startmin){puttime=(endmin-startmin)*60}
+
+                    puttime+=endsec-startsec;
+
+                    return alert("                        天了噜~您的最后得分为："+score+"分"+"\n\n"+"                                   您的用时为："+puttime+"秒")
+                     
+                }
+
+
+        </script>     
+                    
+    </head>
+    <body  >
+        
+            <fieldset>
+               
+                    <legend style="font-size: 2.5em;color:brown;font-family:Arial, Helvetica, sans-serif"><em>艾欧泽亚光之战士统一招生考试（online）</em></legend>
+                    <p> —— 亲爱的考生，欢迎来到大型网络游戏《最终幻想XIV》玩家职业测试网站 ——<br/>
+                    —— 我们希望各位冒险者通过这个测试能够解决“我是谁”“我在哪”“我要去哪”的哲学三问，帮助各位小豆芽和小豆花早日融入艾欧泽亚和海德林的世界 ——<br/>
+                    —— 去吧，冒险者！愿水晶给你指引 —— </p>
+
+            <br/>
+            <center>
+             <div class="time">
+                <div id="datetime" text-align: center;>
+                    <script>
+                        setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1000);
+                    </script>
+                </div>
+
+              <script language="javaScript">
+		
+                        now = new Date(),hour = now.getHours()
+                        if(hour < 6)
+                            {document.write("为什么半夜还不睡觉！！")}
+                        else if (hour < 12)
+                            {document.write("Good Morning~早上好！！")}
+                        else if (hour < 18)
+                            {document.write("Good Afternoon~下午好！！")}
+                        else if (hour < 24)
+                            {document.write("Good Evening~晚上好！！")}
+                
+                        
+                 </script>
+
+                    </div>
+
+                    <p> <input name="star" onclick="start()" type="button" style="color: rgb(63, 2, 14)" value="开始考试">
+                        
+                        
+
+                 </center>
+                    <hr>
+                  <center>
+
+           <form id="test" >
+                <br/>
+             <span class="timu">1.选出所有属于奶妈职业(多选)：<br/></span>
+                  <input type="checkbox" name="q1" value="A" />赤魔法师
+                  <input type="checkbox" name="q1" value="B" />游吟诗人
+                  <input type="checkbox" name="q1" value="C" />占星术士<br/>
+                  <input type="checkbox" name="q1" value="D" />暗黑骑士
+                  <input type="checkbox" name="q1" value="E" />召唤师
+                  <input type="checkbox" name="q1" value="F" />学者
+                  <input type="checkbox" name="q1" value="G" />武僧<br/><br/>
+                  
+               
+            <span class="timu">2.无望流民街属于哪一个地图？<br/></span>
+                  <input type="radio" name="q2" value="A" />中萨纳兰
+                  <input type="radio" name="q2" value="B" />南萨纳兰<br/>
+                  <input type="radio" name="q2" value="C" />北萨纳兰
+                  <input type="radio" name="q2" value="D" />西萨纳兰<br/><br/>
+
+               
+            <span class="timu">3.帝国的新任皇帝是：<br/></span>
+               <select name="q3" size="3" >
+                  <option value="A">索鲁斯·佐斯·加尔乌斯</option>
+                  <option value="B">索尔·佐斯·加尔乌斯</option>
+                  <option value="C">瓦厉斯·佐斯·加尔乌斯</option>
+                  <option value="D">芝诺斯·耶·加尔乌斯</option>
+                </select><br/><br/>
+                
+                
+            <span class="timu">4.下面哪个国家被称为森之都？<br/></span>
+                <input type="radio" name="q4" value="A" />萨纳兰
+                <input type="radio" name="q4" value="B" />利姆萨·罗敏萨<br/>
+                <input type="radio" name="q4" value="C" />库尔札斯
+                <input type="radio" name="q4" value="D" />格里达尼亚<br/><br/>
+
+
+             <span class="timu">5.下面的副本中属于讨伐歼灭战的有(多选)：<br/></span>
+                  <input type="checkbox" name="q5" value="A" />天山绝顶索姆阿尔灵峰<br/>
+                  <input type="checkbox" name="q5" value="B" />恶灵府邸静语庄园<br/>
+                  <input type="checkbox" name="q5" value="C" />尼德霍格征龙战<br/>
+                  <input type="checkbox" name="q5" value="D" />拉姆歼灭战<br/>
+                  <input type="checkbox" name="q5" value="E" />草木庭园圣茉夏娜植物园<br/>
+                  <input type="checkbox" name="q5" value="F" />火龙狩猎战<br/>
+                  <input type="checkbox" name="q5" value="G" />邪龙王座龙巢神殿<br/>
+                
+                
+                
+                
+                
+                
+                
+                <br/>
+               
+            <p> <input name="end" onclick="calculate()" type="button" style="color: rgb(63, 2, 14)" value="我做完啦~"></p>
+               
+               
+           
+           </form>
+
+        </center>
+        </fieldset> 
+        
+                
+    </body>
+
+
+
+
+
+</html>
